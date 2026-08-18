@@ -6,7 +6,7 @@ PATH = "/turkialotaibi9"
 
 def handle():
     return {
-        "name": "Turki Alotaibi",
+        "name": "Turki Mohammed Alotaibi",
         "team": "7",
         "wants": "AI infrastructure Learning",
     }
