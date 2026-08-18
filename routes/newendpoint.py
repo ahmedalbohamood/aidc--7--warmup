@@ -6,7 +6,5 @@ PATH = "/your-github-username"
 
 def handle():
     return {
-        "name": "Your Name",
-        "team": "your-team",
-        "wants": "one thing you want out of the six weeks",
+        "name": "newendpoint by turki"
     }
