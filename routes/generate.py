@@ -11,7 +11,7 @@ def handle():
     prompt = "In one sentence, what is a data centre for?"
     ids = tok(prompt, return_tensors="pt")
     t0 = time.perf_counter()
-    out = model.generate(**ids, max_new_tokens=40, do_sample=False)
+    out = model.generate(**ids, max_new_tokens=40, min_new_tokens=10, do_sample=False)
     dt = time.perf_counter() - t0
     n = out.shape[-1] - ids["input_ids"].shape[-1]
     return {"model": MODEL, "sample": tok.decode(out[0][ids["input_ids"].shape[-1]:],
