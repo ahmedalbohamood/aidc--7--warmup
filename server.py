@@ -18,9 +18,11 @@ def load_routes():
             routes[mod.PATH] = mod.handle
     return routes
 
+ROUTES = load_routes()
+
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        routes = load_routes()
+        routes = ROUTES
         if self.path == "/":
             self.reply(200, {"endpoints": sorted(routes) + ["/"]})
         elif self.path in routes:
